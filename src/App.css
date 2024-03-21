@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+body {
+    background-color: papayawhip;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contactUs {
+    margin-top: 150px;
+    font-size: 35px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-links {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.slideImage {
+    width: 400px;
+    height: 550px;
+}
+
+.slideshowSlider {
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    font-size: 25px;
+    width: 700px;
+    border: 2px solid black;
+}
+
+.btnSearch {
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.shopSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.btnCart {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.btnShop {
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btnCenter {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.product {
+    display: inline-block;
+    margin: 100px;
+    vertical-align: top;
+}
+
+.product img {
+    height: 550px;
+    width: 400px;
+}
+
+.product-description {
+    text-align: center;
+    inline-size: 400px;
+    font-size: 25px;
+}
+
+.btnAddCart {
+    display: flex;
+    justify-content: center;
+}
+
+.btnAddCart button{
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.btnAddCart button:active {
+    background-color: rgb(85, 84, 84);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
 }
