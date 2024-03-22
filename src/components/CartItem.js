@@ -13,21 +13,21 @@ const CartItem = ({ id, quantity }) => {
 
   return (
     <div className='cartItem'>
-      <img src={item.productImage} />
-      <div className='cartDescription'>
+    <img src={item.productImage} />
+    <div className='cartDescription'>
         <div id='cartItemName'><b>{item.productName}</b></div>
         <div className='cartItemTotal'>
             <p>${item.price.toFixed(2)} ea</p>
             <p id='itemTotal'><b>${totalItemPrice.toFixed(2)}</b></p>
         </div>
-      </div>
-      {/* <div className='cartItemCounter'>
+    </div>
+    {/* <div className='cartItemCounter'>
         <RiSubtractFill role='button' className='btnCartSub btnCartItem'/>
         <p style={{fontSize: '20px'}}><b>{quantity}</b></p>
         <IoMdAdd role='button' className='btnCartAdd btnCartItem'/>
-      </div> */}
+    </div> */}
     </div>
-  )
+)
 }
 
 export default CartItem
