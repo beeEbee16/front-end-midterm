@@ -8,7 +8,7 @@ import DataContext from '../context/DataContext';
       <img src={productImage}/>
       <div className='product-description'>
         <p><b>{productName}</b></p>
-        <p>${price}</p>
+        <p>${price.toFixed(2)}</p>
       </div>
       <div className='btnAddCart'>
         <button onClick={() => increaseCartQuantity(id)}>Add to cart</button>

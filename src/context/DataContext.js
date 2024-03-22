@@ -5,6 +5,11 @@ const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
+    const cartQuantity = cartItems.reduce(
+        (quantity, item) => item.quantity + quantity,
+        0
+      )
+
     // Find quantity of item
     const getItemQuantity = (id) => {
         return cartItems.find(item => item.id === id)?.quantity || 0;
@@ -25,7 +30,6 @@ export const DataProvider = ({ children }) => {
                 })
             }
         })
-        console.log(cartItems);
     }
 
     // Decrase quantity of found item, or remove if quantity becomes zero
@@ -54,7 +58,7 @@ export const DataProvider = ({ children }) => {
 
     return (
         <DataContext.Provider value={{
-            getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart
+            getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartQuantity, cartItems
         }}>
             {children}
         </DataContext.Provider>

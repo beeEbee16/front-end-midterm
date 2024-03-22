@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
+import DataContext from './context/DataContext';
 
 const Nav = () => {
-  return (
+  const { cartQuantity } = useContext(DataContext);
 
+  return (
     <div className='navbar'>
       <nav>
         <div className='nav-links'>
@@ -12,10 +14,13 @@ const Nav = () => {
             <Link to='/ShopPage'>Shop</Link>
             <Link to='/About'>About</Link>
             <Link to='/CartPage'>
-              <FaShoppingCart 
-                type='button'
-                className='btnCart'  
-              />
+              <div className='cartCount' style={{position: 'relative'}}>
+                <FaShoppingCart 
+                  type='button'
+                  className='btnCart'  
+                />
+                <span>{cartQuantity}</span>
+              </div>
             </Link>
         </div>
       </nav>
