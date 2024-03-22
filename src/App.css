@@ -23,9 +23,7 @@ a {
 .cartItemCounter {
     display: flex;
     align-items: center;
-    position: fixed;
-    margin-top: 180px;
-    margin-left: 180px;
+   /* position: fixed;  Causing cart buttons to not scroll with the page */
 }
 
 .btnCartItem {
@@ -216,6 +214,14 @@ a {
     background-color: rgb(85, 84, 84);
 }
 
+.btnCartDelete {
+    display: flex;
+    color: red;
+    font-size: 35px;
+    cursor: pointer;
+    margin-left: 330px;
+}
+
 .about {
     display: flex;
     justify-content: center;
@@ -257,6 +263,7 @@ a {
   .cartItem .cartDescription {
     width: 100%;
     font-size: 30px;
+    margin-top: 70px;
   }
 
   .CartItems {
@@ -265,13 +272,3 @@ a {
     flex-direction: column;
   }
   
- /*  .checkout button {
-    width: 150px;
-    height: 50px;
-    background-color: rgb(19, 19, 19);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    margin: 10px;
-    cursor: pointer;
-  } */
