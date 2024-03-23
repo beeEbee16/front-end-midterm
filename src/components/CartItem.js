@@ -6,7 +6,7 @@ import { IoMdAdd } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 
 const CartItem = ({ id, quantity }) => {
-    const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useContext(DataContext);
+    const { increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useContext(DataContext);
     const item = StoreProducts.find((product => product.id === id));
     if (item == null) return null;
 
@@ -22,10 +22,10 @@ const CartItem = ({ id, quantity }) => {
                 <p id='itemTotal'><b>${totalItemPrice.toFixed(2)}</b></p>
             </div>
         <div className='cartItemCounter'>
-            <RiSubtractFill role='button' className='btnCartSub btnCartItem'/>
+            <RiSubtractFill role='button' className='btnCartSub btnCartItem' onClick={() => decreaseCartQuantity(id)}/>
             <p style={{fontSize: '20px'}}><b>{quantity}</b></p>
-            <IoMdAdd role='button' className='btnCartAdd btnCartItem'/>
-            <MdDelete role='button' className='btnCartDelete'/>
+            <IoMdAdd role='button' className='btnCartAdd btnCartItem' onClick={() => increaseCartQuantity(id)}/>
+            <MdDelete role='button' className='btnCartDelete' onClick={() => removeFromCart(id)}/>
         </div>
         </div>
     </div>
