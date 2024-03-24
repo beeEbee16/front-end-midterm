@@ -3,12 +3,17 @@ import { createContext, useState, useEffect } from 'react';
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('ShopPage')) || []);
+    const [ detailProdId, setDetailProdId ] = useState(0);
 
     const cartQuantity = cartItems.reduce(
         (quantity, item) => item.quantity + quantity,
         0
       )
+
+      useEffect(() => {
+        localStorage.setItem('ShopPage', JSON.stringify(cartItems));
+      }, [cartItems])
 
     // Find quantity of item
     const getItemQuantity = (id) => {
@@ -58,7 +63,7 @@ export const DataProvider = ({ children }) => {
 
     return (
         <DataContext.Provider value={{
-            getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartQuantity, cartItems, setCartItems
+            getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartQuantity, cartItems, setCartItems, detailProdId, setDetailProdId
         }}>
             {children}
         </DataContext.Provider>
