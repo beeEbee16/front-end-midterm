@@ -1,71 +1,12 @@
-# Getting Started with Create React App
+Welcome to Bradley's Bookstore. Here you will find various pages, all with different information. The home page is a slideshow of all current books in the store.
+I took some time to figure out how I wanted my homepage to look, and liked the idea of a slideshow of items as seen on other store websites. It took some time to figure
+out how to implement it, and settled on use timeout to achieve an automatic transition after a set time.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Then the shop page was more straightforward on what I needed. I needed to display all items in a file with their respective information, including a button to add to cart, and a price.
+I also added a search option on this page to quickly search and find books that you wanted to find.
 
-## Available Scripts
+Then I added a basic about page as it was needed for the project. Added some typical information like address and phone number. 
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# front-end-midterm
+The shop page was more involved than the other pages. I added the ability to add items to cart from the shop page as well as the product description page. On the cart page, I add the total price based on the individual price of each item and the quantity of them. I added two button, continue shopping and checkout, on the cart page. The continue shopping page does as it says, takes
+you back to the shop page. The checkout button both clears your cart, and redirects you to a basic thank you page. One thing I decided to add was to disable the checkout button and give it a gray
+color if there wasn't anything in your cart, so you didn't checkout an empty cart.
